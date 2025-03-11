@@ -1,0 +1,240 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Selection</title>
+    <style>
+        /* Full-page background */
+        body {
+            background-color: #90c0f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Main container */
+        .container {
+            width: 80%;
+            height: 40%;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Stylish buttons */
+        .button {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            margin: 15px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Button hover effect */
+        .button:hover {
+            background-color: #218838;
+            transform: scale(1.1);
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Hidden buttons (for Engineering levels) */
+        .hidden {
+            display: none;
+            margin-top: 20px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2 style="color: #333; font-size: 28px; margin-bottom: 20px;">SELECT COURSE</h2>
+        <button class="button">PUC</button>
+        <button class="button" onclick="toggleEngineering()">ENGINEERING</button>
+        
+        <div id="engineeringButtons" class="hidden">
+            <button class="button">E1</button>
+            <button class="button">E2</button>
+            <button class="button">E3</button>
+            <button class="button">E4</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleEngineering() {
+            var engDiv = document.getElementById("engineeringButtons");
+            engDiv.style.display = engDiv.style.display === "block" ? "none" : "block";
+        }
+    </script>
+
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Selection</title>
+    <style>
+        /* Full-page background */
+        body {
+            background-color: #90c0f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Main container */
+        .container {
+            width: 80%;
+            height: 60%;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Stylish buttons */
+        .button {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            margin: 15px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Button hover effect */
+        .button:hover {
+            background-color: #218838;
+            transform: scale(1.1);
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .back-button {
+            margin-left:900px;
+            margin-top: 20px;
+        }
+        .back-button a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #063970;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .back-button a:hover {
+            background: #0a4f96;
+        }
+
+        /* Hidden buttons (for Engineering levels) */
+        .hidden {
+            display: none;
+            margin-top: 20px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="back-button">
+            <a href="academics.html">Go Back</a>
+        </div>
+        <h2 style="color: #292727; font-size: 30px; margin-bottom: 28px;">SELECT COURSE</h2>
+        <button class="button" onclick="uploadTimetable('PUC')">PUC</button>
+        <button class="button" onclick="toggleEngineering()">ENGINEERING</button>
+        
+        <div id="engineeringButtons" class="hidden">
+            <button class="button" onclick="uploadTimetable('E1')">E1</button>
+            <button class="button" onclick="uploadTimetable('E2')">E2</button>
+            <button class="button" onclick="uploadTimetable('E3')">E3</button>
+            <button class="button" onclick="uploadTimetable('E4')">E4</button>
+        </div>
+        
+    </div>
+
+    <input type="file" id="fileInput" style="display: none;" onchange="confirmUpload(event)">
+
+    <script>
+        function toggleEngineering() {
+            var engDiv = document.getElementById("engineeringButtons");
+            engDiv.style.display = engDiv.style.display === "block" ? "none" : "block";
+        }
+
+        function uploadTimetable(course) {
+            var fileInput = document.getElementById("fileInput");
+            fileInput.dataset.course = course;
+            fileInput.click();
+        }
+
+        function confirmUpload(event) {
+            var course = event.target.dataset.course;
+            var file = event.target.files[0];
+            if (file) {
+                var confirmation = confirm("Do you want to add the timetable for " + course + "?");
+                if (confirmation) {
+                    // Handle the file upload process here
+                    alert("Timetable for " + course + " added successfully!");
+                } else {
+                    alert("Timetable upload canceled.");
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
+

@@ -1,0 +1,259 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fee Details</title>
+    <style>
+        /* Full-page background */
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Main container */
+        .container {
+            width: 80%;
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Row styles */
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        /* Course name */
+        .course-name {
+            font-size: 18px;
+            color: #333;
+        }
+
+        /* Fee structure */
+        .fee-structure {
+            font-size: 18px;
+            color: #333;
+        }
+
+        /* Update button */
+        .update-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .update-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="course-name">PUC</div>
+            <div class="fee-structure" id="feePUC">$2000</div>
+            <button class="update-button" onclick="updateFeeStructure('PUC')">Update Fee Structure</button>
+        </div>
+        <div class="row">
+            <div class="course-name">Engineering1</div>
+            <div class="fee-structure" id="feeEngineering1">$3000</div>
+            <button class="update-button" onclick="updateFeeStructure('Engineering1')">Update Fee Structure</button>
+        </div>
+        <div class="row">
+            <div class="course-name">Engineering2</div>
+            <div class="fee-structure" id="feeEngineering2">$3200</div>
+            <button class="update-button" onclick="updateFeeStructure('Engineering2')">Update Fee Structure</button>
+        </div>
+        <div class="row">
+            <div class="course-name">Engineering3</div>
+            <div class="fee-structure" id="feeEngineering3">$3400</div>
+            <button class="update-button" onclick="updateFeeStructure('Engineering3')">Update Fee Structure</button>
+        </div>
+        <div class="row">
+            <div class="course-name">Engineering4</div>
+            <div class="fee-structure" id="feeEngineering4">$3600</div>
+            <button class="update-button" onclick="updateFeeStructure('Engineering4')">Update Fee Structure</button>
+        </div>
+    </div>
+
+    <script>
+        function updateFeeStructure(course) {
+            var newFee = prompt("Enter the new fee structure for " + course + ":");
+            if (newFee) {
+                document.getElementById("fee" + course).textContent = "$" + newFee;
+                alert("Fee structure for " + course + " updated successfully!");
+            }
+        }
+    </script>
+
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fee Details</title>
+    <style>
+        /* Full-page background */
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Main container */
+        .container {
+            width: 80%;
+            
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Row styles */
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Course name */
+        .course-name {
+            font-size: 18px;
+            color: #333;
+            flex: 1;
+            text-align: left;
+        }
+
+        /* Fee structure */
+        .fee-structure {
+            font-size: 18px;
+            color: #333;
+            flex: 1;
+            text-align: center;
+        }
+
+        /* Update button */
+        .update-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+            flex: 1;
+            text-align:center;
+        }
+
+        .update-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+
+        .back-button a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--dark-blue);
+            color: blue;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .back-button a:hover {
+            background: var(--hover-blue);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="course-name">PUC</div>
+            <div class="fee-structure" id="feePUC">$2000</div>
+            <button class="update-button" onclick="updateFeeStructure('PUC')">Update Fee Structure</button>
+        </div>
+        <div class="row">
+            <div class="course-name">Engineering1</div>
+            <div class="fee-structure" id="feeEngineering1">$3000</div>
+            <button class="update-button" onclick="updateFeeStructure('Engineering1')">Update Fee Structure</button>
+        </div>
+        <div class="row">
+            <div class="course-name">Engineering2</div>
+            <div class="fee-structure" id="feeEngineering2">$3200</div>
+            <button class="update-button" onclick="updateFeeStructure('Engineering2')">Update Fee Structure</button>
+        </div>
+        <div class="row">
+            <div class="course-name">Engineering3</div>
+            <div class="fee-structure" id="feeEngineering3">$3400</div>
+            <button class="update-button" onclick="updateFeeStructure('Engineering3')">Update Fee Structure</button>
+        </div>
+        <div class="row">
+            <div class="course-name">Engineering4</div>
+            <div class="fee-structure" id="feeEngineering4">$3600</div>
+            <button class="update-button" onclick="updateFeeStructure('Engineering4')">Update Fee Structure</button>
+        </div>
+        <div class="back-button">
+            <a href="academics.html">Go Back</a>
+        </div>
+    </div>
+    
+
+    <script>
+        function updateFeeStructure(course) {
+            var newFee = prompt("Enter the new fee structure for " + course + ":");
+            if (newFee) {
+                document.getElementById("fee" + course).textContent = "$" + newFee;
+                alert("Fee structure for " + course + " updated successfully!");
+            }
+        }
+    </script>
+
+</body>
+</html>

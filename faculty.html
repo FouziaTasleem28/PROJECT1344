@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Event Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #95cbf1;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background:#3784dc;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            color: #f4f723;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .image-box {
+            position: relative;
+            width: 320px;
+            height: 250px;
+            border-radius: 8px;
+            cursor: pointer;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        .image-box:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .image-box .event-name {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 22px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Faculty Event Management</h1>
+        <div class="image-gallery">
+            <div class="image-box" onclick="redirectToPage('/home/user/Desktop/PROJECT/ACADEMICS/academics.html')">
+                <img src="/home/user/Desktop/PROJECT/ACADEMICS/academics.jpg" alt="Academics">
+                <div class="event-name">Academics</div>
+            </div>
+            <div class="image-box" onclick="redirectToPage('/home/user/Desktop/PROJECT/CULTURALS/culturals.html')">
+                <img src="/home/user/Desktop/PROJECT/CULTURALS/culturals.jpeg" alt="Cultural and Events">
+                <div class="event-name">Cultural and Events</div>
+            </div>
+            <div class="image-box" onclick="redirectToPage('workshops.html')">
+                <img src="aim.jpeg" alt="Workshops">
+                <div class="event-name">Workshops</div>
+            </div>
+            <div class="image-box" onclick="redirectToPage('sports.html')">
+                <img src="sports.jpg" alt="Sports">
+                <div class="event-name">Sports</div>
+            </div>
+            <div class="image-box" onclick="redirectToPage('/home/user/Desktop/PROJECT/ORGANISATIONS/organisations.html')">
+                <img src="organisations.jpg" alt="Organisations">
+                <div class="event-name">Organisations</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function redirectToPage(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

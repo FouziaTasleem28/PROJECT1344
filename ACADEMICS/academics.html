@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics</title>
+    <style>
+        :root {
+            --primary-blue: #095cb1;
+            --dark-blue: #063970;
+            --hover-blue: #0a4f96;
+            --highlight-yellow: #f4f723;
+            --button-border: #ffffff;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: black;
+            display: flex;
+            flex-direction: column;
+        }
+        .topbar {
+            width: 100%;
+            background: var(--dark-blue);
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--highlight-yellow);
+        }
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: var(--dark-blue);
+            padding-top: 20px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            text-align: center;
+        }
+        
+        .content {
+            padding: 20px;
+            flex-grow: 1;
+            text-align: center;
+            margin-left: 270px;
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: var(--dark-blue);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .image-container img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+        }
+        .back-button {
+            margin-top: 20px;
+        }
+
+.sidebar button {
+    width: 100%;
+    padding: 15px;
+    background: var(--dark-blue);
+    color: white;
+    border: 2px solid var(--button-border);
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 22px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.sidebar button:hover {
+    background: var(--hover-blue);
+    transform: scale(1.05);
+}
+
+        .back-button a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--dark-blue);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .back-button a:hover {
+            background: var(--hover-blue);
+        }
+    </style>
+</head>
+<body>
+    <div class="topbar">UPLOAD</div>
+    <div class="sidebar">
+        <button onclick="location.href='notices.html'">Notices</button>
+        <button onclick="location.href='academiccalender.html'">Academic Calendar</button>
+        <button onclick="location.href='Timetable.html'">Timetable</button>
+        <button onclick="location.href='password.html'">Fee Details</button>
+        <button onclick="location.href='othershelp.html'">Others Help</button>
+    </div>
+    
+    <div class="content">
+        <h1>Academics</h1>
+        <div class="image-container">
+            <img src="academics.jpg" alt="Academics">
+        </div>
+        <div class="back-button">
+            <a href="/home/user/Desktop/PROJECT/faculty.html">Go Back</a>
+        </div>
+    </div>
+</body>
+</html>

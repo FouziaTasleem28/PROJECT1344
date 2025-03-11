@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culturals</title>
+    <style>
+        /* Full-page background */
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Main container */
+        .container {
+            width: 80%;
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        /* Image styles */
+        .cultural-image {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .cultural-image:hover {
+            transform: scale(1.1);
+        }
+        .back-button {
+            margin-top: 20px;
+        }
+        .back-button a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #063970;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .back-button a:hover {
+            background: #0a4f96;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <h2 style="color: #333; font-size: 28px; margin-bottom: 20px;">Cultural Events</h2>
+        <img src="teckzite.jpeg" alt="Event 1" class="cultural-image" onclick="openUploadPage('event1')">
+        <img src="cygnus.jpeg" alt="Event 2" class="cultural-image" onclick="openUploadPage('event2')">
+        <img src="farewell.jpeg" alt="Event 3" class="cultural-image" onclick="openUploadPage('event3')">
+        <div class="back-button">
+            <a href="/home/user/Desktop/PROJECT/faculty.html">Go Back</a>
+        </div>
+    </div>
+
+    <script>
+        function openUploadPage(event) {
+            window.location.href = 'info.html?event=' + event;
+        }
+    </script>
+
+</body>
+</html>
